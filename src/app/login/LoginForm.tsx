@@ -4,14 +4,12 @@ import {
   FormButtons,
   FormField,
   FormSubmitButton,
-  Heading,
-  Icon,
   PasswordField,
   TextField,
 } from '@umami/react-zen';
 import { useRouter } from 'next/navigation';
 import { useMessages, useUpdateQuery } from '@/components/hooks';
-import { Logo } from '@/components/svg';
+import { BrandLogo } from '@/components/common/BrandLogo';
 import { setClientAuthToken } from '@/lib/client';
 import { consumeReturnUrl } from '@/lib/return-url';
 import { setUser } from '@/store/app';
@@ -38,10 +36,7 @@ export function LoginForm() {
 
   return (
     <Column justifyContent="center" alignItems="center" gap="6">
-      <Icon size="lg">
-        <Logo />
-      </Icon>
-      <Heading>umami</Heading>
+      <BrandLogo height={48} />
       <Form
         onSubmit={handleSubmit}
         error={getErrorMessage(error)}

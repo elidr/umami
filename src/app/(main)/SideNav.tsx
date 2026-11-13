@@ -4,7 +4,6 @@ import {
   Column,
   Icon,
   Row,
-  Text,
   Tooltip,
   TooltipTrigger,
 } from '@umami/react-zen';
@@ -25,7 +24,7 @@ import {
   PanelsLeftBottom,
 } from '@/components/icons';
 import { UserButton } from '@/components/input/UserButton';
-import { Logo } from '@/components/svg';
+import { BrandLogo } from '@/components/common/BrandLogo';
 
 export function SideNav(props: any) {
   const { t, labels } = useMessages();
@@ -98,9 +97,7 @@ export function SideNav(props: any) {
           flexGrow="1"
         >
           {!isCollapsed && (
-            <IconLabel icon={<Logo />}>
-              <Text weight="bold">umami</Text>
-            </IconLabel>
+            <BrandLogo height={24} />
           )}
           <PanelButton />
         </Row>
