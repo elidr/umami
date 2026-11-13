@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next';
 import { FlagValues as FlagValuesScript } from 'flags/react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -53,6 +54,7 @@ export default async function ({ children }) {
           </Providers>
         </Suspense>
         <FlagValuesScript values={flags} />
+        <Analytics />
       </body>
     </html>
   );
